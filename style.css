@@ -42,8 +42,8 @@ body {
 
 /* ===== Hover states (inline base styles need !important to be overridden) ===== */
 .lnk:hover { color: var(--text) !important; }
-.cta:hover { transform: translateY(-2px) !important; box-shadow: 0 16px 40px rgba(0, 206, 201, .34) !important; }
-.cta-sm:hover { transform: translateY(-1px) !important; box-shadow: 0 10px 26px rgba(0, 206, 201, .32) !important; }
+.cta:hover { transform: translateY(-2px) !important; box-shadow: 0 18px 44px rgba(74, 55, 188, .5) !important; }
+.cta-sm:hover { transform: translateY(-1px) !important; box-shadow: 0 10px 26px rgba(74, 55, 188, .45) !important; }
 .ghost:hover { background: rgba(255, 255, 255, .08) !important; }
 .rsvp-btn:hover { background: rgba(255, 82, 82, .1) !important; border-color: rgba(255, 82, 82, .4) !important; }
 .free-btn:hover { background: rgba(255, 255, 255, .1) !important; }
