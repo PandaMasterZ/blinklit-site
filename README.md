@@ -32,5 +32,5 @@ python -m http.server 8000   # then visit http://localhost:8000
 
 ## TODO before going live
 
-- Replace the contact email `srcremadecoco@gmail.com` once the real address exists.
+- Replace the contact email `blinklitofficial@gmail.com` once the real address exists.
 - Point the **Buy Pro** / **Start free** buttons to the real store/app links.
