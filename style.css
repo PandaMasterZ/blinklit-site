@@ -1,0 +1,99 @@
+/* ===== BlinkLit site — shared styles (real brand tokens) ===== */
+:root {
+  --brand-a: #8170F2;          /* logo gradient start */
+  --brand-b: #4A37BC;          /* logo gradient end   */
+  --violet: #6C5CE7;           /* primary violet      */
+  --cyan: #00CEC9;             /* accent: glows/hovers */
+  --coral: #FF5252;            /* focal point / ORP   */
+  --coral-warm: #FF7675;       /* warm variant        */
+  --ink-blink: #2C2A4A;        /* wordmark "Blink"    */
+  --ink-lit: #6C5CE7;          /* wordmark "Lit"      */
+  --bg: #0B1020;               /* midnight page bg    */
+  --surface: #15161A;          /* dark reading surface */
+  --surface-2: #1C1E26;        /* raised surface      */
+  --text: #E7E8EC;             /* light text          */
+  --muted: #9AA0AD;            /* dim text            */
+  --line: rgba(231, 232, 236, .08);
+  --grad-brand: linear-gradient(135deg, var(--brand-a), var(--brand-b));
+  --grad: linear-gradient(110deg, var(--violet), var(--cyan));
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: rgba(255, 82, 82, .3); }
+*:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; border-radius: 4px; }
+[id] { scroll-margin-top: 84px; }
+
+/* ===== Keyframes ===== */
+@keyframes blkPulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.32); opacity: .55; } }
+@keyframes blkDrift1 { 0% { transform: translate(-4%,-3%) scale(1); } 50% { transform: translate(5%,4%) scale(1.08); } 100% { transform: translate(-4%,-3%) scale(1); } }
+@keyframes blkDrift2 { 0% { transform: translate(3%,2%) scale(1.06); } 50% { transform: translate(-5%,-4%) scale(1); } 100% { transform: translate(3%,2%) scale(1.06); } }
+@keyframes blkFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ===== Hover states (inline base styles need !important to be overridden) ===== */
+.lnk:hover { color: var(--text) !important; }
+.cta:hover { transform: translateY(-2px) !important; box-shadow: 0 16px 40px rgba(0, 206, 201, .34) !important; }
+.cta-sm:hover { transform: translateY(-1px) !important; box-shadow: 0 10px 26px rgba(0, 206, 201, .32) !important; }
+.ghost:hover { background: rgba(255, 255, 255, .08) !important; }
+.rsvp-btn:hover { background: rgba(255, 82, 82, .1) !important; border-color: rgba(255, 82, 82, .4) !important; }
+.free-btn:hover { background: rgba(255, 255, 255, .1) !important; }
+
+/* ===== Legal pages (privacy / terms) ===== */
+.legal {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  line-height: 1.65;
+}
+.legal .back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.legal .back:hover { color: var(--text); }
+.legal h1 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 40px);
+  letter-spacing: -.02em;
+  margin: 0 0 4px;
+}
+.legal .updated { color: var(--muted); margin: 0 0 8px; font-size: .9rem; }
+.legal h2 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 34px;
+}
+.legal p { color: var(--text); }
+.legal ul { padding-left: 20px; }
+.legal li { margin-bottom: 8px; }
+.legal a { color: var(--cyan); }
+.legal code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .9em;
+  background: rgba(255, 255, 255, .06);
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+.legal-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .9rem;
+  text-align: center;
+  padding: 28px 20px;
+}
